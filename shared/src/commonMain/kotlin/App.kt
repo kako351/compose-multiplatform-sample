@@ -12,6 +12,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import data.Recipe
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 
@@ -34,6 +35,14 @@ fun App() {
                     null
                 )
             }
+//            RecipeCell(
+//                recipe = Recipe(
+//                    "やわらかな豚肉、プリプリのえびといかのうまみが麺にもしっかりしみて、後引くおいしさ。",
+//                    "https://cooking-records.ex.oishi-kenko.com/images/2.jpg",
+//                    "main_dish",
+//                    "2018-05-01 17:57:31"
+//                )
+//            )
         }
     }
 }
