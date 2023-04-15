@@ -19,12 +19,13 @@ import model.Recipe
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import com.myapplication.common.MR
 import repository.RecipeRepositoryImpl
+import style.MyTheme
 import view.GridList
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
 fun App() {
-    MaterialTheme {
+    MyTheme {
         val recipes = RecipeRepositoryImpl().getRecipes()
         Scaffold(
             topBar = {
