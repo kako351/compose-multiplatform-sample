@@ -42,6 +42,10 @@ class RecipeRepositoryImpl: RecipeRepository{
                 title = "唐揚げ",
                 resource = MR.images.recipe9
             ),
+            Recipe(
+                title = "コーヒー",
+                resource = MR.images.recipe10
+            )
         )
     }
 }
