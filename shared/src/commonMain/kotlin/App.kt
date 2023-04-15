@@ -1,9 +1,13 @@
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material.FloatingActionButton
+import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -27,6 +31,14 @@ fun App() {
                 TopAppBar(
                     title = { Text(text = "Recipe Album") },
                 )
+            },
+            floatingActionButton = {
+                FloatingActionButton(onClick = { /*TODO*/ }) {
+                    Icon(
+                        Icons.Default.Favorite,
+                        contentDescription = "Favorite"
+                    )
+                }
             },
             content = {
                 GridList(recipes)
