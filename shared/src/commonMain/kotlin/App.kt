@@ -1,6 +1,9 @@
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -19,9 +22,16 @@ import view.GridList
 fun App() {
     MaterialTheme {
         val recipes = RecipeRepositoryImpl().getRecipes()
-        Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-            GridList(recipes)
-        }
+        Scaffold(
+            topBar = {
+                TopAppBar(
+                    title = { Text(text = "Recipe Album") },
+                )
+            },
+            content = {
+                GridList(recipes)
+            }
+        )
     }
 }
 
